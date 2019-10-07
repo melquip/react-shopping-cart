@@ -6,13 +6,14 @@ import Item from './ShoppingCartItem';
 import CartContext from '../contexts/CartContext';
 
 const ShoppingCart = () => {
+	debugger
 	const { cart } = useContext(CartContext);
+	debugger
 	const getCartTotal = () => {
 		return cart.reduce((acc, value) => {
 			return acc + value.price;
 		}, 0).toFixed(2);
 	};
-
 	return (
 		<div className="shopping-cart">
 			{cart.map(item => (
