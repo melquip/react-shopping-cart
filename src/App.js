@@ -17,7 +17,7 @@ function App() {
 	const [cart, setCart] = useLocalStorage('contextapi_cart', []);
 
 	const addItem = item => {
-		setCart([...cart, item]);
+		setCart([...cart.filter(cartitem => cartitem.id !== item.id), item]);
 	};
 
 	const removeItem = id => e => {
