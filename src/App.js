@@ -21,7 +21,7 @@ function App() {
 	};
 
 	const removeItem = id => e => {
-		setCart([...cart.filter(item => item.id !== id)]);
+		setCart(cart.filter(item => item.id !== id));
 	}
 
 	return (
